@@ -22,3 +22,4 @@ while True:
 					print(saida[random.randint(0, len(saida) -1)])		
 	if frase == "0":
 		exit()
+
