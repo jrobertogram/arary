@@ -8,3 +8,36 @@ def wordInFrase(teste, lista):
 	return True
 	
 print(wordInFrase(teste, lista))
+
+
+''' ------------------- '''
+#string = "como surgiu a filosofia na Grécia antiga" 
+lista = [['nasceu',"surgiu", 'nascimento'], ['Grécia', 'Roma'], ["filosofia", 'matematica']]
+quantidade = 1
+
+
+l = []
+
+def verificar_contido(palavras, quan):
+  cont = 0
+  for i in palavras:
+    if i in string:
+      cont += 1
+        
+  if cont != quan:
+    l.append('false')
+    
+  else:
+    l.append('true')
+
+for c in range(len(lista)):
+  verificar_contido(lista[c],quantidade)
+
+def retornar(lista):
+  if 'false' in lista:
+    return False 
+  return True
+
+retornar(l)
+
+''' --------------- '''
