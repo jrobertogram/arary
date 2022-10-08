@@ -1,11 +1,15 @@
 """
 intalação: pip install spacy
-pacote de modelo em pt: python -m spacy donwload pt
+modelo em pt: python -m spacy download pt
+Pacote de frases: python -m spacy donwload pt_core_news_sm
+              ou: python -m spacy donwload pt_core_news_md
 """
 import spacy
+nlp = spacy.load('pt_core_news_sm')
 
-nlp = spacy.blank("pt")
-doc = nlp('Todos os gatos são amarelos')
-
+doc = nlp('A galinha atravessou a rua para ganhar um milhão.')
+word_With_Classe = {}
 for token in doc:
-    print(token.text, token.pos_)
+    word_With_Classe[token.text] = spacy.explain(token.tag_)
+
+print(word_With_Classe)
