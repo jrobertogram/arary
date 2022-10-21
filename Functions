@@ -39,9 +39,9 @@ def retornar(lista):
 retornar(l)
 
 
-frase = "Meu nome é Benedito, qual é o seu Nome cara?"
+#frase = "Meu nome é Benedito, qual é o seu Nome cara?"
 
-#frase =input("Digite uma frase:")
+frase =input("Digite uma frase:")
 
 lista = frase.split()
 
