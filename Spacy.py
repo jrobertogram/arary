@@ -6,7 +6,7 @@ Pacote de frases: python -m spacy donwload pt_core_news_sm
 """
 import spacy
 nlp = spacy.load('pt_core_news_sm') 
-doc = nlp('A galinha atravessou a rua para ganhar um milhão.') #Coloque o texto aqui
+doc = nlp('A galinha atravessou a rua para ganhar um milhão.') 
 
 def spacy(doc, nlp):
     class_pt = {'ADJ': 'adjetivo', 'ADP' : 'aposição', 'ADV': 'adverbio', 'AUX': 'auxiliar', 'CCONJ': ['conjunção', 'coordenativa'], 'DET': 'determinante', 'INTJ' : 'interjeição', 'NOUN' : 'substantivo', 'NUM' : 'numeral', 'PART': 'partícula', 'PRON' : 'pronome', 'PROPN' : 'nome próprio', 'PUNCT' : 'pontuação', 'SCONJ' : 'conjunção subordinativa', 'SYM' : 'símbolo', 'VERB' : 'verbo', 'X' : 'outro'}

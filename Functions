@@ -1,54 +1,42 @@
-#frase = 'como surgiu a filosofia na Grécia'
-teste = input("digite: ").split()
-lista = ['surgiu', 'filosofia']
-def wordInFrase(teste, lista):
-	for plv1 in lista:
-		if plv1 not in teste:
-			return False
-	return True
+# Luckas
+def palavras4Texto(texto, palavras):
+  texto = texto.split()
+  for plv1 in palavras:
+    if plv1 not in texto:
+      return False
+  return True
 	
-print(wordInFrase(teste, lista))
+print(palavras4Texto("como surgiu a filosofia na Grécia", ['surgiu', 'filosofia']))
 
+# Emerson
+def contarRepetiçõesPalavras(texto):
+  lista = texto.split()
+  repeticao = []
+  for n in lista:
+      repeticao.append(lista.count(n))
+  return list(zip(lista, repeticao))
+
+print(contarRepetiçõesPalavras('Meu nome é Benedito, qual é o seu Nome cara?'))
+
+# Rodrigo
 string = "como surgiu a filosofia na Grécia antiga" 
-lista = [['nasceu',"surgiu", 'nascimento'], ['Grécia', 'Roma'], ["filosofia", 'matematica']]
+lista = [['nasceu',"oie", 'nascimento'], ['Grécia', 'Roma'], ["filosofia", 'matematica']]
 quantidade = 1
 
-
-l = []
-
-def verificar_contido(palavras, quan):
-  cont = 0
-  for i in palavras:
-    if i in string:
-      cont += 1
-        
-  if cont != quan:
-    l.append('false')
-    
-  else:
-    l.append('true')
-
-for c in range(len(lista)):
-  verificar_contido(lista[c],quantidade)
-
-def retornar(lista):
-  if 'false' in lista:
+def listaPalavras4Texto(lista, quan):
+  l = []
+  for c in range(len(lista)):
+    cont = 0
+    for i in lista[c]:
+      if i in string:
+        cont += 1
+          
+    if cont != quan:
+      l.append('false')
+    else:
+      l.append('true')
+  if 'false' in l:
     return False 
   return True
 
-retornar(l)
-
-
-#frase = "Meu nome é Benedito, qual é o seu Nome cara?"
-
-frase =input("Digite uma frase:")
-
-lista = frase.split()
-
-repeticao = []
-for n in lista:
-    repeticao.append(lista.count(n))
-
-print("frase\n" + frase +"\n")
-
-print(list(zip(lista, repeticao)))
+listaPalavras4Texto(lista,quantidade)
