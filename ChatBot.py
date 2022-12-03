@@ -1,9 +1,11 @@
 import random
+import functions
 
 cerebro = [
 ["oi cara", ["olá, tudo bem?", "oi", "oieeee", "eaeeh"],{"tipoEntrada": "Pesquisa", "tipoSaida": "Aleatorio"}],
 ["Tudo bem", "Que bom, Eu me chamo Arári, estou aqui para conversar sobre filosia.",{"tipoEntrada": "exato", "tipoSaida": "exato"}],
 ]
+
 
 while True:
 	frase = input("Escreva aqui: ").lower().strip()
