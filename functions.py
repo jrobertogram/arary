@@ -21,18 +21,18 @@ def contarRepetiçõesPalavras(texto):
 #print(contarRepetiçõesPalavras('Meu nome é Benedito, qual é o seu Nome cara?'))
 
 # Rodrigo
-string = "como surgiu a filosofia na Grécia antiga" 
+texto = "como surgiu a filosofia na Grécia antiga" 
 lista = [['nasceu',"oie", 'nascimento'], ['Grécia', 'Roma'], ["filosofia", 'matematica']]
 quantidade = 1
 
-def listaPalavras4Texto(lista, quan):
+def listaPalavras4Texto(texto, lista, quantidade):
   l = []
   for c in range(len(lista)):
     cont = 0
     for i in lista[c]:
-      if i in string:
+      if i in texto:
         cont += 1
-    if cont != quan:
+    if cont != quantidade:
       l.append('false')
     else:
       l.append('true')
@@ -40,7 +40,7 @@ def listaPalavras4Texto(lista, quan):
     return False 
   return True
 
-#listaPalavras4Texto(lista,quantidade)
+#listaPalavras4Texto(string, lista,quantidade)
 
 #Roberto
 texto = "como surgiu a matematica na Holanda" 
@@ -49,6 +49,8 @@ quantidade = 2
 
 def palavrasQuantidade4Texto(texto, palavras, quantidade):
   texto = texto.split()
+  if quantidade == 0 or quantidade >= len(texto):
+    return palavras4Texto(texto, palavras)
   cont = 0
   for plv1 in palavras:
     if plv1 in texto:
